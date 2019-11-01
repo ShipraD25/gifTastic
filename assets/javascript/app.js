@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var topics = ["Monkey", "Dog", "Cat"];
+    var topics = ["pony", "dog", "shark", "cat"];
 
     // Function for displaying movie data
     function renderButtons() {
@@ -24,12 +24,12 @@ $(document).ready(function() {
     }
 
     // This function handles events where one button is clicked
-    $("newButton").on("click", function(event) {
+    $("#add-animal").on("click", function(event) {
         // event.preventDefault() prevents the form from trying to submit itself.
         // We're using a form so that the user can hit enter instead of clicking the button if they want
-        //event.preventDefault();
+        event.preventDefault();
 
-        //This line will grab the text from the input box
+        // This line will grab the text from the input box
         var animal = $("#animal-input").val().trim();
         // The movie from the textbox is then added to our array
 
@@ -42,34 +42,51 @@ $(document).ready(function() {
     // Calling the renderButtons function at least once to display the initial list of movies
     renderButtons();
 
-    /* $(".animal").on("click", function() {
+    // Adding click event listen listener to all buttons
+    $("#add-animal").on("click", function() {
+        // Grabbing and storing the data-animal property value from the button
+        var animal = $(this).attr("data-name");
+        console.log("clicked")
+            // Constructing a queryURL using the animal name
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+            animal + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
-         // Storing our giphy API URL for a random cat image
-         var queryURL = "https://api.giphy.com/v1/gifs/search?q=kittens&limit=1&api_key=wslWpWhssAgYDK6zVXacBDsacT47flr4";
+        // Performing an AJAX request with the queryURL
+        $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+            // After data comes back from the request
+            .then(function(response) {
+                console.log(queryURL);
 
-         // Perfoming an AJAX GET request to our queryURL
-         $.ajax({
-             url: queryURL,
-             method: "GET"
-         })
+                console.log(response);
+                // storing the data from the AJAX request in the results variable
+                var results = response.data;
 
-         // After the data from the AJAX request comes back
-         .then(function(response) {
+                // Looping through each result item
+                for (var i = 0; i < results.length; i++) {
 
-             // Saving the image_original_url property
-             var imageUrl = response.data.image_original_url;
+                    // Creating and storing a div tag
+                    var animalDiv = $("<div>");
 
-             // Creating and storing an image tag
-             var animalImage = $("<img>");
+                    // Creating a paragraph tag with the result item's rating
+                    var p = $("<p>").text("Rating: " + results[i].rating);
 
-             // Setting the catImage src attribute to imageUrl
-             animalImage.attr("src", imageUrl);
-             animalImage.attr("alt", "cat image");
+                    // Creating and storing an image tag
+                    var animalImage = $("<img>");
+                    // Setting the src attribute of the image to a property pulled off the result item
+                    animalImage.attr("src", results[i].images.fixed_height.url);
 
-             // Prepending the catImage to the images div
-             $("#images").prepend(animalImage);
-         });
-     });*/
+                    // Appending the paragraph and image tag to the animalDiv
+                    animalDiv.append(p);
+                    animalDiv.append(animalImage);
+
+                    // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
+                    $("#gifs-appear-here").prepend(animalDiv);
+                }
+            });
+    });
 
 
 
