@@ -1,0 +1,12 @@
+.button-area {
+    background: #E5A073;
+    border: none;
+    margin: 6px;
+}
+
+.animal {
+    margin: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
