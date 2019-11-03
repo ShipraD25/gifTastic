@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var topics = ["pony", "dog", "shark", "cat"];
+    var topics = ["pony", "dog", "shark", "cat", "tiger", "lion", "yak", "fox"];
 
     // Function for displaying topic data
     function renderButtons() {
@@ -47,13 +47,12 @@ $(document).ready(function() {
 
     // Adding click event listen listener to all buttons
     $(document).on("click", ".animal", function() {
+        //making gif area empty before adding new gifs
         $("#gifs-appear-here").empty();
         // Grabbing and storing the data-name property value from the button
         var newThing = $(this).attr("data-name");
-        console.log("this=", this);
-        console.log("clicked");
-        console.log("newThing=", newThing)
-            // Constructing a queryURL using the animal name
+
+        // Constructing a queryURL using the animal name
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             newThing + "&api_key=Ywn2mJtKjDMmqTbrwMvwKC0tQvah1wrr&limit=10";
 
@@ -64,7 +63,6 @@ $(document).ready(function() {
         }).then(function(response) {
 
 
-            console.log(response);
             // storing the data from the AJAX request in the results variable
             var results = response.data;
 
