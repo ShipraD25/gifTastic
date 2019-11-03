@@ -1,33 +1,50 @@
-.button-area {
-    background: #E5A073;
-    border: none;
-    margin: 6px;
-}
-
-.animal {
-    margin: 20px;
-    font-size: 14px;
-    padding: 10px 15px;
-    border-radius: 10px;
-}
-
-h1 {
-    text-align: center;
-}
-
-.btn-submit {
-    font-size: 14px;
-    color: #fff;
-    background: #009900;
-    border: none;
-    padding: 10px 15px;
-    margin: 6px;
-    border-radius: 10px;
-}
-
-form {
-    float: right;
-}
+                .button-area {
+                    background: #E5A073;
+                    border: none;
+                    margin: 6px;
+                }
+                
+                .animal {
+                    margin: 20px;
+                    font-size: 14px;
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                }
+                
+                h1 {
+                    text-align: center;
+                }
+                
+                .btn-submit {
+                    font-size: 14px;
+                    color: #fff;
+                    background: #009900;
+                    border: none;
+                    padding: 10px 15px;
+                    margin: 6px;
+                    border-radius: 10px;
+                    float: left;
+                }
+                
+                form {
+                    float: right;
+                }
+                
+                input {
+                    width: 100%;
+                }
+                
+                #gifs-appear-here {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 33.33%;
+                }
+                
+                .gif {
+                    margin: 10px;
+                    border-radius: 10px;
+                }
+                /*flex: 20%;*
 
 
 /*#topic-input {
