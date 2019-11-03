@@ -47,6 +47,7 @@ $(document).ready(function() {
 
     // Adding click event listen listener to all buttons
     $(document).on("click", ".animal", function() {
+        $("#gifs-appear-here").empty();
         // Grabbing and storing the data-name property value from the button
         var newThing = $(this).attr("data-name");
         console.log("this=", this);
