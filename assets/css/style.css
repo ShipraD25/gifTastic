@@ -10,3 +10,26 @@
     padding: 10px 15px;
     border-radius: 10px;
 }
+
+h1 {
+    text-align: center;
+}
+
+.btn-submit {
+    font-size: 14px;
+    color: #fff;
+    background: #009900;
+    border: none;
+    padding: 10px 15px;
+    margin: 6px;
+    border-radius: 10px;
+}
+
+form {
+    float: right;
+}
+
+
+/*#topic-input {
+    float: right;
+}
