@@ -4,14 +4,16 @@
 
 
 In this assignment we were asked to use the GIPHY API to make a dynamic web page that populates with gifs of your choice.
-To achieve this these following steps are taken.
-. Global variables are declared in the begining.
-. Buttons in the HTML are generated dynamicaly using JQuery.
-. Then three event listeners are declared
-* one that listens to clicks on submit button and forms new buttons.
-* second listens to the clicks on the topic buttons and makes an AJAX call which then gets 10 non-animated gifs from GIPHY API.
-* third event listerner listens to the clicks on gifs and toggles its state to either animate or still.
-Form is also added with small input field that allows user to submit a topic which will generate a new button.
+To achieve this these following steps are taken-
+* Global variables are declared in the begining.
+* Buttons in the HTML are generated dynamicaly using JQuery.
+* Then three event listeners are declared
+* One that listens to clicks on submit button and forms new buttons.
+* Second listens to the clicks on the topic buttons and makes an AJAX call which then gets 10 non-animated gifs from GIPHY API.
+* Third event listerner listens to the clicks on gifs and toggles its state to either animate or still.
+* Form is also added with small input field that allows user to submit a topic which will generate a new button.
+
+This page is fully responsive.
 
 Pseudocode put throughout to understand the functionality of code.
 
@@ -80,4 +82,4 @@ Pseudocode put throughout to understand the functionality of code.
 
 ## Game Preview
 
-![giftastic Demo!](https://drive.google.com/file/d/1Xq4b3evDKORb-17a_zi-ZRhSKWPYbU4j/view)
+![giftastic Demo!](https://media.giphy.com/media/htYWjHLbmqTHsWbRQG/giphy.gif)
