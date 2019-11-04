@@ -80,6 +80,6 @@ Pseudocode put throughout to understand the functionality of code.
 ```
 
 
-## Game Preview
+## Game Demo
 
 ![giftastic Demo!](https://media.giphy.com/media/htYWjHLbmqTHsWbRQG/giphy.gif)
