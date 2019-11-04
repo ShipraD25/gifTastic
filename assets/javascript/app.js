@@ -6,7 +6,7 @@ $(document).ready(function() {
         // Deleting the topic buttons prior to adding new topic buttons
         // (this is necessary otherwise we will have repeat buttons)
         $(".button-area").empty();
-        // Looping through the array of movies
+        // Looping through the array of topics
         for (var i = 0; i < topics.length; i++) {
 
             // Then dynamicaly generating buttons for each topic in the array.
@@ -33,7 +33,7 @@ $(document).ready(function() {
         // This line will grab the text from the input box
         var newTopic = $("#topic-input").val().trim();
         // The topic from the textbox is then added to our array
-        //console.log("Topic Input=", newTopic)
+
         topics.push(newTopic);
 
         // calling renderButtons which handles the processing of our topics array
@@ -52,7 +52,7 @@ $(document).ready(function() {
         // Grabbing and storing the data-name property value from the button
         var newThing = $(this).attr("data-name");
 
-        // Constructing a queryURL using the animal name
+        // Constructing a queryURL using the new thing
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             newThing + "&api_key=Ywn2mJtKjDMmqTbrwMvwKC0tQvah1wrr&limit=10";
 
