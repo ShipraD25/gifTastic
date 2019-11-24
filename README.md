@@ -1,6 +1,6 @@
 # gifTastic
 
-# Link to project https://shiprad25.github.io/gifTastic/
+### Link to project https://shiprad25.github.io/gifTastic/
 
 ## Summary
 
